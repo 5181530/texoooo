@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio - Alan Ramón Texocotitla Bastida</title>
+  <meta name="author" content="Alan Ramón Texocotitla Bastida" />
+  <meta name="description" content="Página de presentación para la asignatura Programación Imperativa - Facultad de Contaduría y Administración" />
+
+  <style>
+    :root{
+      --accent:#0b6b6b;
+      --muted:#6b7280;
+      --bg:#f7fafc;
+      --card:#ffffff;
+      --radius:12px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+
+    .container{max-width:980px;margin:36px auto;padding:20px}
+
+    header{display:flex;gap:18px;align-items:center}
+    .brand{background:linear-gradient(135deg, rgba(11,107,107,0.12), rgba(11,107,107,0.02));padding:18px;border-radius:14px}
+    h1{margin:0;font-size:1.35rem}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    nav{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    nav a{background:var(--card);padding:8px 12px;border-radius:10px;text-decoration:none;color:var(--accent);border:1px solid rgba(11,107,107,0.08);font-weight:600}
+
+    main{margin-top:22px;display:grid;grid-template-columns:1fr 320px;gap:20px}
+
+    .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(12,14,20,0.04)}
+
+    .about h2{margin-top:0}
+    .info-list{list-style:none;padding:0;margin:10px 0 0}
+    .info-list li{padding:6px 0;border-bottom:1px dashed #eef2f6;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+    .tag{background:#f0fdfa;padding:6px 8px;border-radius:999px;border:1px solid rgba(11,107,107,0.06);font-weight:600;color:var(--accent)}
+
+    aside .card{position:sticky;top:20px}
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:0.95rem}
+
+    /* Responsive */
+    @media (max-width:880px){
+      main{grid-template-columns:1fr}
+      aside .card{position:static}
+    }
+
+    /* Print friendly */
+    @media print{
+      body{background:white}
+      nav, .no-print{display:none}
+      .container{max-width:100%;padding:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand card" style="display:flex;align-items:center;gap:14px">
+        <div style="width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#0b6b6b,#3fb0b0);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px">UAEM</div>
+        <div>
+          <h1>Universidad Autónoma del Estado de México</h1>
+          <p class="lead">Facultad de Contaduría y Administración — Programación Imperativa</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="no-print">
+      <a href="#sobre">Sobre mí</a>
+      <a href="#proyecto">Proyecto</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main>
+      <section class="card about">
+        <h2 id="sobre">Información del alumno</h2>
+        <p>Alumno que presenta este trabajo para la asignatura <strong>Programación Imperativa</strong>, con los datos institucionales visibles a continuación.</p>
+
+        <ul class="info-list" aria-label="datos del alumno">
+          <li><strong>Nombre:</strong> Alan Ramón Texocotitla Bastida</li>
+          <li><strong>Grupo:</strong> I4</li>
+          <li><strong>Facultad:</strong> Contaduría y Administración</li>
+          <li><strong>Universidad:</strong> Universidad Autónoma del Estado de México</li>
+          <li><strong>Asignatura:</strong> Programación Imperativa</li>
+        </ul>
+
+        <h3 style="margin-top:16px">Descripción breve</h3>
+        <p>Esta página es un ejemplo de entrega en HTML/CSS que demuestra estructura semántica, diseño responsivo sencillo y buenas prácticas para presentar trabajos académicos en la web.</p>
+
+        <h3 style="margin-top:14px">Contenido añadido</h3>
+        <p>Incluye secciones de proyecto, contacto y recursos. Puedes editarla en Visual Studio Code, cambiar estilos, agregar imágenes o subirla a GitHub Pages.</p>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid #eef2f6" />
+        <section id="proyecto">
+          <h2>Proyecto (Ejemplo)</h2>
+          <p>En esta sección puedes describir una práctica, tarea o proyecto. A modo de ejemplo se muestra una lista de entregables:</p>
+          <ul>
+            <li>Documento en PDF con guía y resultados.</li>
+            <li>Archivo de código fuente (PSeInt, .py o .c según corresponda).</li>
+            <li>Presentación en PowerPoint o PDF.</li>
+          </ul>
+        </section>
+
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Datos rápidos</h3>
+          <div class="skills">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Responsivo</span>
+            <span class="tag">Entrega</span>
+          </div>
+
+          <h4 style="margin-top:12px">Contacto</h4>
+          <p class="muted">(Agregar correo institucional si lo deseas)</p>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid #eef2f6" />
+          <p style="font-size:0.95rem;color:var(--muted)"><strong>Profesor:</strong> (Agrega nombre del docente)</p>
+
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Alan Ramón Texocotitla Bastida — Facultad de Contaduría y Administración — UAEM</p>
+      <p class="no-print">Para imprimir: usa <strong>Ctrl+P</strong> y elige escala apropiada.</p>
+    </footer>
+  </div>
+</body>
+</html>
